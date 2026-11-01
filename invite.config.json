@@ -1,0 +1,41 @@
+{
+  "couple": {
+    "bride": "Ishita",
+    "groom": "Aarav",
+    "date": "2026-12-12",
+    "eyebrow": "A date to remember",
+    "tagline": "Our next chapter, with you"
+  },
+  "events": [
+    { "id": "mehndi", "title": "Mehndi", "emoji": "🌿", "date": "2026-12-10", "time": "16:00", "theme": "mint", "figures": 1, "chip": "", "art": "",
+      "venue": { "name": "The Zenana Garden", "address": "Udaipur, Rajasthan" } },
+    { "id": "sangeet", "title": "Sangeet", "emoji": "💃", "date": "2026-12-11", "time": "19:00", "theme": "lavender", "figures": 2, "chip": "Ye naachte bhi hain!", "art": "",
+      "venue": { "name": "The Lakeside Terrace", "address": "Lake Pichola, Udaipur, Rajasthan" } },
+    { "id": "haldi", "title": "Haldi", "emoji": "💛", "date": "2026-12-12", "time": "10:30", "theme": "butter", "figures": 1, "chip": "", "art": "",
+      "venue": { "name": "The Courtyard Lawns", "address": "City Palace Road, Udaipur, Rajasthan" } },
+    { "id": "wedding", "title": "The Wedding", "emoji": "💍", "date": "2026-12-12", "time": "18:00", "theme": "blush", "figures": 2, "chip": "Varmala bhi!", "art": "",
+      "venue": { "name": "The Palace Gardens", "address": "Udaipur, Rajasthan" } },
+    { "id": "reception", "title": "Reception", "emoji": "🥂", "date": "2026-12-15", "time": "20:00", "theme": "cream", "figures": 2, "chip": "", "art": "",
+      "venue": { "name": "The Grand Ballroom", "address": "Udaipur, Rajasthan" } }
+  ],
+  "closing": {
+    "eyebrow": "Save us a little space",
+    "title": "A day with our people",
+    "message": "Every good day is better with our people in it. We would love you to be part of this one."
+  },
+  "rsvp": {
+    "type": "whatsapp",
+    "number": "919999999999",
+    "text": "Hi! We'll be at Ishita & Aarav's wedding 🎉",
+    "url": ""
+  },
+  "video": {
+    "secondsPerPage": 3,
+    "music": "",
+    "captions": {
+      "cover": "Calendar jaisa khulta hai",
+      "events": "Har function ka apna page",
+      "closing": "Date · Map · RSVP · ek link"
+    }
+  }
+}

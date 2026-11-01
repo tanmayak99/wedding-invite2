@@ -1,0 +1,6 @@
+body { margin: 0; background: #f1c3c3; font-family: Poppins, sans-serif; }
+.stage { min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 18px 12px; box-sizing: border-box; }
+nav { display: flex; gap: 10px; margin-top: 16px; }
+nav button { border: 0; border-radius: 18px; padding: 8px 18px; font: 600 12px Poppins, sans-serif; background: #a8325e; color: #fff; cursor: pointer; }
+nav button:disabled { opacity: 0.35; cursor: default; }
+button:focus-visible, a:focus-visible { outline: 3px solid #4a2233; outline-offset: 2px; }
