@@ -2,6 +2,8 @@ import type { CSSProperties } from "react";
 import "./card.css";
 import { themes } from "./themes";
 import { Figures } from "./Figures";
+import { Border } from "./Border";
+import { Fx } from "./Fx";
 import { Cfg, fmtDate, fmtTime, mapUrl, pagesOf, rsvpUrl } from "./util";
 
 function Month({ iso }: { iso: string }) {
@@ -21,10 +23,10 @@ function Month({ iso }: { iso: string }) {
   );
 }
 
-type Props = { cfg: Cfg; page: number; flip: number; asset: (p: string) => string; onSave?: (i: number) => void };
+type Props = { cfg: Cfg; page: number; flip: number; asset: (p: string) => string; onSave?: (i: number) => void; time?: number };
 
 // Pure view: page + flip (0..1) in, markup out. The website and the video both drive it.
-export function Card({ cfg, page, flip, asset, onSave }: Props) {
+export function Card({ cfg, page, flip, asset, onSave, time = 0 }: Props) {
   const p = pagesOf(cfg)[page];
   const ev = p.k === "event" ? cfg.events[p.i!] : null;
   const t = themes[ev ? ev.theme : p.k === "closing" ? "rose" : "peach"];
@@ -33,6 +35,8 @@ export function Card({ cfg, page, flip, asset, onSave }: Props) {
     <div className="card" style={vars}>
       <div className="rings">{Array.from({ length: 14 }, (_, i) => <i key={i} />)}</div>
       <div className="sheet" style={{ transform: `rotateX(${(1 - flip) * -80}deg)`, opacity: 0.3 + 0.7 * flip }}>
+        <Border theme={ev ? ev.theme : p.k === "closing" ? "rose" : "peach"} t={time} />
+        <Fx t={time} />
         <div className="frame">
           {p.k === "cover" && (
             <div className="mid">
@@ -46,7 +50,7 @@ export function Card({ cfg, page, flip, asset, onSave }: Props) {
             <>
               <small>Let's celebrate</small>
               <h2>{ev.title}</h2>
-              <Figures n={ev.figures} art={ev.art ? asset(ev.art) : ""} />
+              <Figures n={ev.figures} art={ev.art ? asset(ev.art) : ""} t={time} dance={!!ev.chip} />
               {ev.chip && <span className="chip">{ev.chip}</span>}
               <div className="meta">
                 <div>

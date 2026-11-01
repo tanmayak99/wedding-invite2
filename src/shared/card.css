@@ -2,9 +2,7 @@
 .rings { position: absolute; top: -14px; left: 0; right: 0; height: 28px; display: flex; justify-content: space-around; padding: 0 14px; z-index: 3; }
 .rings i { width: 6px; height: 28px; border-radius: 4px; background: #2a2023; }
 .sheet { position: absolute; inset: 0; transform-origin: top center; background: var(--bg); border: 6px solid var(--acc); border-radius: 6px; box-shadow: 10px 12px 0 #0000001a; overflow: hidden; }
-.frame { position: absolute; inset: 10px; border: 2px solid var(--soft); border-radius: 4px; display: flex; flex-direction: column; align-items: center; padding: 34px 22px 22px; text-align: center;
-  background: radial-gradient(circle at 0 0, var(--soft) 0 46px, #0000 47px), radial-gradient(circle at 100% 0, var(--soft) 0 46px, #0000 47px),
-              radial-gradient(circle at 0 100%, var(--soft) 0 64px, #0000 65px), radial-gradient(circle at 100% 100%, var(--soft) 0 64px, #0000 65px); }
+.frame { position: absolute; inset: 10px; border: 2px solid var(--soft); border-radius: 4px; display: flex; flex-direction: column; align-items: center; padding: 34px 22px 22px; text-align: center; }
 .card small { font: 600 10px Poppins, sans-serif; letter-spacing: 0.2em; opacity: 0.7; }
 .card h1 { font-size: 46px; font-weight: 500; margin: 4px 0; line-height: 1; }
 .card h2 { font-size: 42px; font-weight: 500; margin: 6px 0 0; line-height: 1.05; }
@@ -28,3 +26,4 @@
 .tabs button.on { background: #a8325e; color: #fff; }
 .cap { font: 600 15px Poppins, sans-serif; background: #fff; border-radius: 30px; padding: 8px 18px; color: #4a2233; }
 @media (prefers-reduced-motion: reduce) { .sheet { transition: none; } }
+.bd, .fx { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
